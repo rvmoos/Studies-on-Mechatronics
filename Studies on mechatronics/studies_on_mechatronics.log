@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.5.31)  12 JUN 2017 18:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.5.31)  13 JUN 2017 09:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -655,46 +655,49 @@ e
 ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Missing character: There is no Ã in font ptmri7t!
 Missing character: There is no ¼ in font ptmri7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
+Underfull \hbox (badness 10000) in paragraph at lines 116--118
 []\OT1/ptm/m/n/8 Peter Pf-ef-fer, Man-fred Har-rer, \OT1/ptm/m/it/8 Lenkung-sha
 nd-buch:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
+Underfull \hbox (badness 10000) in paragraph at lines 116--118
 \OT1/ptm/m/it/8 Lenksys-teme, Lenkgefhl, Fahr-dy-namik von Kraft-fahrzeu-gen
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 106.
+LaTeX Font Info:    Try loading font information for U+msa on input line 122.
 (c:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 106.
+LaTeX Font Info:    Try loading font information for U+msb on input line 122.
 
 (c:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 109--112
+Underfull \hbox (badness 10000) in paragraph at lines 125--128
 []\OT1/ptm/m/n/8 B. Zheng, S. An-war \OT1/ptm/m/it/8 Yaw sta-bil-ity con-trol o
 f a steer-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--112
+Underfull \hbox (badness 10000) in paragraph at lines 125--128
 \OT1/ptm/m/it/8 by-wire equipped ve-hi-cle via ac-tive front wheel steer-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--127
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
 []\OT1/ptm/m/n/8 Pan Song, Masayoshi Tomizuka, Changfu Zong \OT1/ptm/m/it/8 A n
 ovel
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--127
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
 \OT1/ptm/m/it/8 in-te-grated chas-sis con-troller for full drive-by-wire ve-hi-
 cles
  []
@@ -727,7 +730,7 @@ Here is how much of TeX's memory you used:
 se/8r.enc}<c:/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texl
 ive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2016/texmf-dis
 t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on studies_on_mechatronics.pdf (1 page, 45863 bytes).
+Output written on studies_on_mechatronics.pdf (1 page, 46227 bytes).
 PDF statistics:
  24 PDF objects out of 1000 (max. 8388607)
  17 compressed objects within 1 object stream
