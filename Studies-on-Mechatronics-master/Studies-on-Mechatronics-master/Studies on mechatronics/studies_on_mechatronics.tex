@@ -1,0 +1,180 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{enumerate}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{times}
+\usepackage{bbm}
+\usepackage[bb=boondox]{mathalfa}
+\usepackage{multirow}
+\usepackage{arydshln}
+\usepackage{tikz}
+\usepackage{bbold}
+\usetikzlibrary{matrix}
+\usepackage{subcaption}
+\usepackage{url}
+
+\begin{document}
+\title{
+Drive-by-Wire
+\\[0.5cm]
+\large{Studies on Mechatronics FS 2017}
+}
+
+\author{\IEEEauthorblockN{Noah Isaak}
+\IEEEauthorblockA{student number: \\ 13-929-476}
+\and
+
+\IEEEauthorblockN{Richard von Moos}
+\IEEEauthorblockA{student number: \\ 10-935-740}
+}
+
+\maketitle
+
+%% Definitions by LF
+\setlength\parindent{0pt}
+\newcommand{\spn}[1]{\textsc{Span} \left\{ #1 \right\}}
+\newcommand{\dimension}[1]{\textsc{dim} \left\{ #1 \right\}}
+\newcommand{\real}[1]{\textsc{Re} \left( #1 \right)}
+\newcommand{\imag}[1]{\textsc{Im} \left( #1 \right)}
+\newcommand{\DET}[1]{\textsc{Det} \left[ #1 \right]}
+\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
+
+
+\thispagestyle{plain}
+\pagestyle{plain}
+
+%\begin{abstract}
+%The abstract goes here.
+%\end{abstract}
+
+
+\section{Introduction}
+
+%Motivation
+The decision to write a paper on the state of the art of drive-by-wire systems came natural, as we were designing a drive-by-wire system ourselves for our bachelor thesis. With the rise in popularity of electric cars, manufacturers and research groups see new opportunities in overhauling the previous methods of controlling a car. This rise in interest led to many approaches and solutions. The idea of this paper is not to gain new insights, but to provide the reader with a basic understanding of this topic. The content of this paper is mostly based on the findings of the state of the art technology.
+
+%Rewrite
+%The paper is structured as follows. An overview of a drive-by-wire system is given in section II. In Section III we show the different ways how the vehicle dynamics were modelled and implemented in some papers.
+%
+%Section IV discusses common control algorithms mentioned in the various papers we read, namely sliding mode control, fuzzy control and h-infinity control. 
+
+In the early years of the drive-by-wire technology, an implementation seemed far fetched.
+
+\section{Drive by Wire}
+
+\subsection{Steer by Wire}
+
+%Control Objective
+%Components
+\subsubsection{Implementation}
+By setting up appropriate sensor and actor dynamics, a stable steer by wire system can be created.
+The steering feel of a mechanical decoupled steer by wire car can be even better than in a car with conventional electromechanical steering 
+%(Koch, 2009(Steer by wire)).
+
+A central question that comes with the objective of robust Steer-by-Wire is how the steering interface eg.
+steering wheel etc. gives a reference target and what sensor measurement is led back to the steering 
+interface as steering response. One way of doing this is to define a reference target by applying 
+a moment to the steering wheel. The sensor measurement will be brought back to the steering wheel
+and is translated to steering angle. If this combination is coupled with yaw velocitiy as reference 
+target as well as response a working steering function can be implemented.
+In the case of oversteering the feedback will yield a greater steering angle as the current one,
+this leads to the current steering position being coupled to a smaller force what directly
+decreases the reference target and therefore acts stabilizing.
+
+\subsection{Throttle by Wire}
+
+\subsection{Brake by Wire}
+\subsubsection{Implementation}
+
+
+\section{Vehicle Dynamics, Vehicle Model}
+\subsection{Tyre modelling}
+\subsection{Bicycle model}
+\subsection{Multi-body modelling}
+
+\section{Fault tolerance}
+The basic requirement for the operation of a Steer-by-Wire system is a fault tolerant system architecture %(Heitzer und Seewald, 2000).
+This necessitates a reliable fault management strategy.
+As a result, Sensors should be implemented in groups of three. A faulty sensor can so be overruled by the the two correctly funktioning sensors. Control units and actors should be implemented twofold redundant. If an error is detected the faulty operating unit shuts down and the second Control unit or actor continues with the operation. To lower the cost of redundant implementation, a fault management strategy can be defined. In the case of failure of a non critical systems component, only certain functions of the system are shut down but the overall functionality remains. For example if a wheel Revolution sensor??? fails, only functions that need the current velocity shut down but the car can still safely slowdown.
+
+\section{Control Algorithms}
+\subsection{Non-Linearity}
+\subsection{Sliding Mode Control}
+\subsection{Fuzzy Control}
+The basic idea of fuzzy control is to map a set of input variables to a set of output instructions
+by using a multitude of if then statements. Therefore the inputs are characterized by their
+membership to a set of fuzzy sets. The degree of membership can be gradual and each input can 
+be a member of multiple fuzzy sets to certain degree. This process of converting a set of crisp
+input variables to a set of fuzzy membership functions is called fuzzyfication. The next step
+is to determine the output based the underlying control rules. The membership functions are
+mapped to a fuzzy output. This fuzzy output is then defuzzyficated to deliver a real world output.
+In short, each combination of membership of a variable leads output defined by the if then rules.
+%(http://www.springer.com/cda/content/document/cda_downloaddocument/9781846284687-c1.pdf.)
+
+This method grants way do deal with a multitude of inputs in a system with unknown environmental
+parameters. It is especially effective at handling uncertainties and unlinearitites associated
+with complex control systems such as breaking systems in a car. The nonlinearities can be 
+captured by the control rules.
+[1]
+\subsection{H-Infinity Control}
+
+\section{Testing, Verification}
+
+
+\section{Results and Discussion}
+
+
+
+
+\section{Conclusion}
+
+De richi stenkt 
+
+\begin{thebibliography}{1}
+\bibitem{Weidong}
+Weidong Xiang, Paul C. Richardson, Chenming Zhao, Syed Mohammad, 
+\emph{Automobile Brake-by-Wire Control System Design and Analysis}, 
+NO.1, January 2008.
+http://ieeexplore.ieee.org/document/4358463/
+
+\bibitem{Worldcongress2008}
+Yasushi Aoki, Kenji Suzuki, Hiroshi Nakano, Kohei Akamine, Takaomi Shirase, Kouji Sakai, 
+\emph{Development of Hydraulic Servo Brake for Cooperative Control with Regenerative Brake}
+http://papers.sae.org/2007-01-0868/
+
+\bibitem{Lenkungshandbuch}
+Peter Pfeffer, Manfred Harrer, \emph{Lenkungshandbuch: Lenksysteme, Lenkgefühl, Fahrdynamik von Kraftfahrzeugen} http://www.springer.com/de/book/9783658009762
+\textbf{Abschnitt R, Steer-by-wire}
+
+\bibitem{JSME}
+Se-Wook Oh, Ho-Chol Chae, Seok-Chan Yun, Chang-Soo Han
+\emph{The Design of a Controller for the Steer-by-Wire System}
+\url{https://www.jstage.jst.go.jp/article/jsmec/47/3/47_3_896/_article/}
+
+\bibitem{Zheng}
+B. Zheng, S. Anwar
+\emph{Yaw stability control of a steer-by-wire equipped vehicle via active front wheel steering}
+http://www.sciencedirect.com/science/article/pii/S0957415809000804
+
+\bibitem{Yamaguchi}
+Yousuke Yamaguchi, Toshiyuki Murakami
+\emph{Adaptive Control for Virtual Steering Characteristics on Electric Vehicle Using Steer-by-Wire System}
+http://ieeexplore.ieee.org/abstract/document/4689398/
+
+\bibitem{vandersande}
+T. van der Sande, P. Zegelaar, I. Besselink, H. Nijmeijer
+\emph{A robust control analysis for a steer-by-wire vehicle with uncertainty on the tyre forces}
+http://www.tandfonline.com/doi/full/10.1080/00423114.2016.1197407
+
+\bibitem{Song}
+Pan Song, Masayoshi Tomizuka, Changfu Zong
+\emph{A novel integrated chassis controller for full drive-by-wire vehicles}
+http://www.tandfonline.com/doi/abs/10.1080/00423114.2014.991331
+
+
+
+\end{thebibliography}
+
+\end{document}
